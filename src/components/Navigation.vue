@@ -79,7 +79,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
     <div class="container-editorial">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <a href="#" class="flex items-center gap-2" @click.prevent="scrollToSection('')">
-          <img :src="kaeLogo" alt="KAE Spa" class="h-9 lg:h-11" :class="isScrolled ? '' : 'filter brightness-0 invert'" />
+          <img :src="kaeLogo" alt="KAE Spa" class="h-14 lg:h-16" :class="isScrolled ? '' : 'filter brightness-0 invert'" />
           <!-- <span v-if="!isScrolled" class="font-script text-2xl text-kae-gold">KAE</span> -->
         </a>
 
