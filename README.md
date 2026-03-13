@@ -1,141 +1,203 @@
-# Kae Spa Website
+# Kae Luxury Spa Website
 
-A modern and elegant spa website built with Vue.js, TypeScript, and Firebase.
+A modern, elegant spa website built with Vue 3, TypeScript, and Firebase. Experience Balinese healing traditions meets contemporary luxury.
 
-## Features
+![Kae Luxury Spa](https://img.shields.io/badge/Vue-3.5-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue) ![Vite](https://img.shields.io/badge/Vite-4.5-646cff)
 
-- Responsive design with mobile-first approach
-- Elegant and clean UI with custom color palette
-- Firebase integration for data storage
-- Booking system
-- Testimonials carousel
-- Contact form with Google Maps integration
-- WhatsApp integration for direct communication
-- Beautiful hero section with dynamic background
-- Smooth scrolling navigation
+## ✨ Features
 
-## Tech Stack
+- 🎨 **Elegant Design** - Luxury aesthetic with custom emerald and gold color palette
+- 📱 **Fully Responsive** - Mobile-first approach, works perfectly on all devices
+- 🔥 **Firebase Integration** - Real-time data with Firestore
+- 📅 **Booking System** - Easy appointment scheduling via WhatsApp
+- ⭐ **Testimonials** - Customer reviews carousel
+- 🗺️ **Google Maps** - Location integration
+- 💬 **WhatsApp Integration** - Direct communication with visitors
+- 🌅 **Hero Section** - Dynamic background with trust badges (5-star rating, expert therapists, hours)
+- 🧭 **Smooth Navigation** - Seamless scrolling and SPA routing
+- 🎭 **Splash Screen** - Elegant loading animation
 
-- Vue.js 3 with TypeScript
-- Vite
-- Tailwind CSS
-- Firebase (Firestore)
-- Vue Router
-- Pinia
+## 🛠️ Tech Stack
 
-## Project Structure
+- **Framework**: Vue.js 3 with Composition API & TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **State Management**: Pinia
+- **Routing**: Vue Router
+- **Backend**: Firebase (Firestore)
+- **Deployment**: Netlify
+
+## 📁 Project Structure
 
 ```
-kaespa/
+kaeluxuryspa/
 ├── src/
-│   ├── assets/         # Static assets (images, SVGs)
-│   │   ├── sections/   # Page sections
-│   │   └── ui/         # UI components
-│   ├── router/         # Vue Router configuration
-│   ├── stores/         # Pinia stores
-│   └── views/          # Page components
-├── public/             # Public assets
-└── dist/              # Production build
+│   ├── assets/           # Static assets (images, SVGs, logos)
+│   ├── components/       # Vue components
+│   │   ├── sections/     # Page sections (Hero, About, Services, etc.)
+│   │   └── ui/           # Reusable UI components
+│   ├── router/           # Vue Router configuration
+│   ├── services/         # API services (menuService, etc.)
+│   ├── stores/           # Pinia stores
+│   ├── style.css         # Global styles
+│   └── views/            # Page components
+├── public/               # Public assets (favicons, etc.)
+├── netlify.toml          # Netlify configuration
+├── .env.example          # Environment variables template
+└── package.json          # Project dependencies
 ```
 
-## Setup Instructions
+## 🚀 Getting Started
 
-1. Clone the repository
-2. Install dependencies:
+### Prerequisites
+
+- Node.js 18+ and npm/yarn/pnpm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/kaeluxuryspa.git
+   cd kaeluxuryspa
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Create a `.env` file in the root directory with your Firebase configuration:
-   ```
-   VITE_FIREBASE_API_KEY=your_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
-   VITE_FIREBASE_PROJECT_ID=your_project_id
-   VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-   VITE_FIREBASE_APP_ID=your_app_id
+3. **Set up environment variables**
+
+   Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
    ```
 
-4. Start the development server:
+   Fill in your Firebase credentials:
+   ```env
+   VITE_FIREBASE_API_KEY=your_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+   ```
+
+4. **Start the development server**
    ```bash
    npm run dev
    ```
 
-5. Build for production:
-   ```bash
-   npm run build
-   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser
 
-## Firebase Setup
+## 📦 Available Scripts
 
-1. Create a new Firebase project
-2. Enable Firestore database
-3. Create the following collections:
-   - services
-   - bookings
-   - testimonials
-   - inquiries
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run migrate` | Run data migration script |
+| `npm run seed` | Seed database with sample data |
 
-## Netlify Deployment
+## 🔥 Firebase Setup
 
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+1. **Create a Firebase project**
+   - Go to [Firebase Console](https://console.firebase.google.com)
+   - Create a new project
 
-2. Sign in to Netlify and click "New site from Git"
+2. **Enable Firestore Database**
+   - Navigate to Firestore Database
+   - Click "Create Database"
+   - Choose production or test mode
 
-3. Choose your repository
+3. **Configure Collections**
+   - `services` - Spa treatments and pricing
+   - `bookings` - Appointment bookings
+   - `testimonials` - Customer reviews
+   - `inquiries` - Contact form submissions
 
-4. Configure the build settings:
+## 🌐 Deployment
+
+### Netlify (Recommended)
+
+The project includes a `netlify.toml` configuration file for easy deployment.
+
+#### Via Netlify Dashboard:
+
+1. Push your code to GitHub
+2. Go to [Netlify](https://netlify.com)
+3. Click "Add new site" → "Import from Git"
+4. Select your repository
+5. Configure build settings (auto-detected from `netlify.toml`):
    - Build command: `npm run build`
    - Publish directory: `dist`
-   - Node version: `18` (or your preferred version)
+6. Add environment variables in Site Settings → Environment variables
+7. Deploy!
 
-5. Add your environment variables in the Netlify dashboard:
-   - Go to Site settings > Environment variables
-   - Add all your Firebase environment variables
-   - Add any other environment variables your app needs
+#### Via Netlify CLI:
 
-6. Optional: Configure custom domain
-   - Go to Domain settings
-   - Add your custom domain
-   - Follow the DNS configuration instructions
+```bash
+npm install -g netlify-cli
+netlify login
+netlify init
+netlify deploy --prod
+```
 
-7. Enable automatic deployments:
-   - Netlify will automatically deploy when you push to your main branch
-   - You can also set up branch deployments for previews
+### Environment Variables for Production
 
-## Customization
+Add these in Netlify (Site Settings → Environment variables):
+
+```
+VITE_FIREBASE_API_KEY
+VITE_FIREBASE_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET
+VITE_FIREBASE_MESSAGING_SENDER_ID
+VITE_FIREBASE_APP_ID
+VITE_FIREBASE_MEASUREMENT_ID
+```
+
+## 🎨 Customization
 
 ### Colors
 
-The color palette can be customized in `tailwind.config.js`:
+Edit the color palette in `tailwind.config.js`:
 
 ```js
 theme: {
   extend: {
     colors: {
-      'spa-bg': '#FFFDF6',
-      'spa-accent-1': '#FAF6E9',
-      'spa-accent-2': '#DDEB9D',
-      'spa-accent-3': '#A0C878',
+      'kae-green': '#1A3A32',
+      'kae-beige': '#F5F1E8',
+      'kae-gold': '#B8860B',
+      'kae-gold-light': '#D4A437',
     },
   },
-},
+}
 ```
+
+### Logo
+
+Replace the logo in `src/assets/`:
+- `kae_logo_gold.svg` - Gold version for dark backgrounds
+- `kae_logo_black.svg` - Black version for light backgrounds
 
 ### Images
 
-Replace the placeholder images in the `public/images` directory with your own spa images.
+Update images in:
+- `src/assets/` - Component-specific images
+- `public/` - Static assets
 
-## Development
+## 📄 License
 
-### Available Scripts
+MIT License - feel free to use this project for your own spa website!
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
+## 👨‍💻 Author
 
-## License
+Built for Kae Luxury Spa - Bali
 
-MIT
+---
+
+**Enjoy your spa website! 🌺**

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,10 +6,10 @@
 
 @layer base {
   html {
-    @apply bg-spa-bg;
+    @apply scroll-smooth antialiased;
   }
   body {
-    @apply font-body text-gray-800;
+    @apply font-body text-kae-green bg-kae-beige;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
@@ -18,15 +18,23 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-spa-accent-3 text-white px-6 py-3 rounded-2xl hover:bg-opacity-90 transition-all duration-300;
+    @apply bg-kae-gold text-kae-green px-8 py-4 rounded-full font-body font-medium transition-all duration-400 hover:bg-kae-gold-light hover:shadow-gold hover:-translate-y-0.5;
   }
   .btn-secondary {
-    @apply bg-spa-accent-2 text-gray-800 px-6 py-3 rounded-2xl hover:bg-opacity-90 transition-all duration-300;
+    @apply bg-transparent border-2 border-kae-gold/50 text-kae-gold px-8 py-4 rounded-full font-body font-medium transition-all duration-400 hover:bg-kae-gold/10 hover:border-kae-gold hover:-translate-y-0.5;
   }
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28 lg:py-36;
   }
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  .container-editorial {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
   }
+}
+
+/* Refined card hover transition */
+.card-hover-luxury {
+  @apply transition-all duration-500 ease-out;
+}
+.card-hover-luxury:hover {
+  @apply shadow-card-hover -translate-y-1;
 }

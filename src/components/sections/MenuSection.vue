@@ -12,52 +12,25 @@ function getWhatsAppLink(treatment: Treatment, option: Treatment['options'][0]) 
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
 }
 
-// Add structured data for menu/services
 onMounted(async () => {
   try {
     treatments.value = await menuService.getAllTreatments()
-    
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Menu',
       name: 'KAE Spa Bali Services',
-      description: 'Luxury spa treatments and massage services in Bali',
-      provider: {
-        '@type': 'Organization',
-        name: 'KAE Spa Bali',
-        url: 'https://kaespabali.com'
-      },
-      hasMenuSection: [
-        {
-          '@type': 'MenuSection',
-          name: 'Massage Treatments',
-          hasMenuItem: treatments.value.map(treatment => ({
-            '@type': 'MenuItem',
-            name: treatment.name,
-            description: treatment.description,
-            image: treatment.image, // Add image property
-            offers: treatment.options.map(option => ({
-              '@type': 'Offer',
-              price: option.price.replace('K', '000'),
-              priceCurrency: 'IDR',
-              availability: 'https://schema.org/InStock',
-              validFrom: new Date().toISOString(),
-              itemOffered: {
-                '@type': 'Service',
-                name: `${treatment.name} (${option.duration})`,
-                description: treatment.description,
-                provider: {
-                  '@type': 'Organization',
-                  name: 'KAE Spa Bali'
-                }
-              }
-            }))
-          }))
-        }
-      ]
+      provider: { '@type': 'Organization', name: 'KAE Spa Bali', url: 'https://kaespabali.com' },
+      hasMenuSection: [{
+        '@type': 'MenuSection',
+        name: 'Treatments',
+        hasMenuItem: treatments.value.map(t => ({
+          '@type': 'MenuItem',
+          name: t.name,
+          description: t.description,
+          offers: t.options.map(o => ({ '@type': 'Offer', price: o.price.replace('K', '000'), priceCurrency: 'IDR' })),
+        })),
+      }],
     }
-
-    // Add structured data to the page
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.text = JSON.stringify(structuredData)
@@ -72,78 +45,73 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="section-padding bg-white pt-12 mt-8" aria-labelledby="menu-heading">
-    <div class="container-custom">
-      <header class="text-center mb-8 px-2 md:px-0">
-        <h1 id="menu-heading" class="text-2xl md:text-4xl font-heading text-spa-accent-3 mb-2 md:mb-3 tracking-tight">
-          Treatments
-        </h1>
-        <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base font-light">
+  <section id="menu" class="section-padding bg-white overflow-hidden">
+    <div class="container-editorial">
+      <header class="text-center mb-16 lg:mb-24">
+        <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Full Menu</span>
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+          Treatments & Pricing
+        </h2>
+        <p class="font-body text-lg lg:text-xl text-kae-green/70 max-w-2xl mx-auto leading-relaxed">
           Discover our curated selection of premium spa experiences
         </p>
       </header>
 
-      <!-- Error message -->
-      <div v-if="error" class="bg-red-50 border border-red-100 text-red-600 px-4 py-3 rounded-lg mb-6 text-center text-sm">
+      <div v-if="error" class="bg-red-50 border border-red-100 text-red-600 px-6 py-4 rounded-2xl mb-8 text-center font-body">
         {{ error }}
       </div>
 
-      <!-- Loading state -->
-      <div v-if="loading" class="text-center py-6">
-        <div class="inline-block h-6 w-6 animate-spin rounded-full border-3 border-solid border-spa-accent-3 border-r-transparent"></div>
+      <div v-if="loading" class="flex justify-center py-20">
+        <div class="w-12 h-12 border-2 border-kae-gold/30 border-t-kae-gold rounded-full animate-spin" />
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
-        <article 
-          v-for="treatment in treatments" 
-          :key="treatment.id" 
-          class="bg-white rounded-xl p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-lg border border-gray-100"
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <article
+          v-for="treatment in treatments"
+          :key="treatment.id"
+          class="group bg-kae-beige/40 rounded-3xl p-8 border border-kae-green/5 transition-all duration-500 hover:shadow-card-hover hover:border-kae-gold/20 hover:-translate-y-1"
         >
-          <div>
-            <h2 class="text-xl font-heading text-spa-accent-3 mb-2 tracking-tight">{{ treatment.name }}</h2>
-            <p class="font-body text-gray-600 mb-4 text-sm leading-relaxed">{{ treatment.description }}</p>
-          </div>
-          <div class="flex flex-wrap gap-2">
+          <span
+            v-if="treatment.category"
+            class="inline-block px-3 py-1 mb-4 text-xs font-body font-medium tracking-wider uppercase rounded-full bg-kae-green/5 text-kae-green"
+          >
+            {{ treatment.category }}
+          </span>
+          <h3 class="font-heading text-xl lg:text-2xl text-kae-green mb-3 group-hover:text-kae-gold transition-colors duration-300">
+            {{ treatment.name }}
+          </h3>
+          <p class="font-body text-kae-green/70 text-sm mb-6 leading-relaxed">
+            {{ treatment.description }}
+          </p>
+          <div class="flex flex-wrap gap-3">
             <a
               v-for="option in treatment.options"
               :key="option.duration"
               :href="getWhatsAppLink(treatment, option)"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-white text-spa-accent-3 rounded-2xl px-4 py-2 flex items-center justify-center hover:bg-spa-accent-3 hover:text-white transition-all duration-300 border border-spa-accent-3 cursor-pointer group text-sm"
-              :aria-label="`Book ${treatment.name} for ${option.duration} at ${option.price}`"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-kae-green/10 text-kae-green text-sm font-body font-medium transition-all duration-300 hover:bg-kae-gold hover:text-kae-green hover:border-kae-gold"
+              :aria-label="`Book ${treatment.name} - ${option.duration} at ${option.price}`"
             >
-              <span class="font-medium">{{ option.price }}</span>
-              <span class="mx-2 text-spa-accent-3 group-hover:text-white" aria-hidden="true">·</span>
-              <span class="text-xs">{{ option.duration }}</span>
+              {{ option.price }} · {{ option.duration }}
             </a>
           </div>
         </article>
       </div>
+
+      <div class="mt-16 text-center">
+        <a
+          href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-kae-green text-kae-gold px-10 py-4 rounded-full font-body font-medium transition-all duration-400 hover:bg-kae-green-dark hover:-translate-y-0.5"
+        >
+          <span>View Full Menu & Book</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.section-padding {
-  padding: 1.5rem 1rem;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding: 2rem 1.5rem;
-  }
-}
-
-.container-custom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0.75rem;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-</style> 

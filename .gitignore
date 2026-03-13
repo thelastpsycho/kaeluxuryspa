@@ -56,6 +56,9 @@ firebase-debug.log
 firebase-debug.*.log
 .runtimeconfig.json
 
+# Netlify
+.netlify
+
 # Misc
 .DS_Store
 Thumbs.db

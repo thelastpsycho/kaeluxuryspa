@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
-    "migrate": "tsx src/scripts/migrateData.ts"
+    "migrate": "tsx src/scripts/migrateData.ts",
+    "seed": "tsx src/scripts/seedData.ts"
   },
   "dependencies": {
     "@types/dompurify": "^3.2.0",

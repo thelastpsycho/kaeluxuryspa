@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import kaeLogo from '../assets/kae_logo_black.svg'
+import kaeLogo from '../assets/kae_logo_gold.svg'
 
 interface Props {
   message?: string

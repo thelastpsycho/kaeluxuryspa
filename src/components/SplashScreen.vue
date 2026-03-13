@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import kaeLogo from '../assets/kae_logo_black.svg'
+import kaeLogo from '../assets/kae_logo_gold.svg'
 
 const emit = defineEmits(['done'])
 const progress = ref(0)

@@ -21,6 +21,8 @@ export interface Treatment {
   description: string
   options: TreatmentOption[]
   image?: string
+  category?: string
+  featured?: boolean
 }
 
 const COLLECTION_NAME = 'treatments'
