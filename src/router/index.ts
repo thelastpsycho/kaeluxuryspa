@@ -29,8 +29,8 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/LoginView.vue'),
       meta: {
-        title: 'Login - KAE Spa Bali',
-        description: 'Login to your KAE Spa Bali account to manage your appointments and preferences.'
+        title: 'Admin Login - Kae Luxury Spa',
+        description: 'Secure admin login portal for Kae Luxury Spa management.'
       }
     },
     {
@@ -38,8 +38,8 @@ const router = createRouter({
       name: 'admin',
       component: () => import('../views/AdminView.vue'),
       meta: {
-        title: 'Admin - KAE Spa Bali',
-        description: 'Admin dashboard for managing KAE Spa Bali services and appointments.',
+        title: 'Admin Dashboard - Kae Luxury Spa',
+        description: 'Admin dashboard for managing Kae Luxury Spa services and treatments.',
         requiresAuth: true
       }
     }

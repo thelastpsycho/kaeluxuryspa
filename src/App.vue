@@ -6,14 +6,21 @@ import MaintenancePage from './components/MaintenancePage.vue'
 import SplashScreen from './components/SplashScreen.vue'
 import ErrorBoundary from './components/ErrorBoundary.vue'
 import ToastManager from './components/ToastManager.vue'
-import { ref, onMounted, provide } from 'vue'
+import { ref, onMounted, provide, computed } from 'vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 const isMaintenanceMode = import.meta.env.VITE_MAINTENANCE_MODE === 'true'
 const maintenanceMessage = import.meta.env.VITE_MAINTENANCE_MESSAGE
 const maintenanceEstimatedTime = import.meta.env.VITE_MAINTENANCE_ESTIMATED_TIME
 const showSplash = ref(true)
 const showContent = ref(false)
 const toastManager = ref<InstanceType<typeof ToastManager> | null>(null)
+
+// Hide nav and footer on login and admin pages
+const hideNavAndFooter = computed(() => {
+  return route.path === '/login' || route.path === '/admin'
+})
 
 const handleSplashDone = () => {
   showSplash.value = false
@@ -51,12 +58,12 @@ onMounted(() => {
           />
         </template>
         <template v-else>
-          <Navigation />
-          <main class="flex-grow">
+          <Navigation v-if="!hideNavAndFooter" />
+          <main class="flex-grow" :class="{ 'min-h-screen': hideNavAndFooter }">
             <router-view />
           </main>
-          <Footer />
-          <WhatsAppButton />
+          <Footer v-if="!hideNavAndFooter" />
+          <WhatsAppButton v-if="!hideNavAndFooter" />
         </template>
       </div>
       <ToastManager ref="toastManager" />

@@ -3,9 +3,5 @@ import MenuAdmin from '../components/admin/MenuAdmin.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <MenuAdmin />
-    </div>
-  </div>
-</template> 
+  <MenuAdmin />
+</template>
