@@ -73,7 +73,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
   <nav
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-400',
-      isScrolled ? 'bg-kae-green/95 backdrop-blur-md shadow-luxury-soft' : 'bg-transparent'
+      isScrolled ? 'bg-kae-teal/95 backdrop-blur-md shadow-luxury-soft' : 'bg-transparent'
     ]"
   >
     <div class="container-editorial">
@@ -90,7 +90,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
             href="#"
             :class="[
               'font-body text-sm px-4 py-2 rounded-full transition-all duration-300',
-              isScrolled ? 'text-kae-beige/80 hover:text-kae-gold' : 'text-white/80 hover:text-kae-gold',
+              isScrolled ? 'text-kae-white/80 hover:text-kae-gold' : 'text-white/80 hover:text-kae-gold',
               activeSection === item.hash ? 'text-kae-gold font-medium' : ''
             ]"
             @click.prevent="scrollToSection(item.hash)"
@@ -105,7 +105,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
           rel="noopener noreferrer"
           :class="[
             'hidden lg:inline-flex items-center gap-2 px-6 py-3 rounded-full font-body text-sm font-medium transition-all duration-400',
-            isScrolled ? 'bg-kae-gold text-kae-green hover:bg-kae-gold-light' : 'bg-kae-gold/90 text-kae-green hover:bg-kae-gold'
+            isScrolled ? 'bg-kae-gold text-kae-teal-dark hover:bg-kae-gold-light' : 'bg-kae-gold/90 text-kae-teal-dark hover:bg-kae-gold'
           ]"
         >
           Book Now
@@ -138,7 +138,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
     >
       <div
         v-if="isMenuOpen"
-        class="lg:hidden fixed inset-0 top-20 bg-kae-green/98 backdrop-blur-xl z-40 overflow-y-auto"
+        class="lg:hidden fixed inset-0 top-20 bg-kae-teal/98 backdrop-blur-xl z-40 overflow-y-auto"
       >
         <div class="container-editorial py-8 flex flex-col gap-1">
           <a
@@ -147,7 +147,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
             href="#"
             :class="[
               'font-body text-lg py-4 px-5 rounded-2xl transition-all',
-              'text-kae-beige/90 hover:text-kae-gold',
+              'text-kae-white/90 hover:text-kae-gold',
               activeSection === item.hash ? 'bg-white/10 text-kae-gold font-medium' : ''
             ]"
             @click.prevent="scrollToSection(item.hash)"
@@ -158,7 +158,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
             href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-6 bg-kae-gold text-kae-green py-4 rounded-2xl font-body font-medium text-center"
+            class="mt-6 bg-kae-gold text-kae-teal-dark py-4 rounded-2xl font-body font-medium text-center"
             @click="isMenuOpen = false"
           >
             Book Your Experience

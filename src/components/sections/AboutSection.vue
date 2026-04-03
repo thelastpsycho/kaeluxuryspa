@@ -45,14 +45,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="about" class="section-padding bg-kae-beige overflow-hidden">
+  <section id="about" class="section-padding bg-kae-cream overflow-hidden">
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-24">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Our Story</span>
-        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-teal mb-6">
           About KAE Spa
         </h2>
-        <p class="font-body text-lg lg:text-xl text-kae-green/70 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-body text-lg lg:text-xl text-kae-teal/70 max-w-2xl mx-auto leading-relaxed">
           Discover our commitment to wellness and the sanctuary we've created for you
         </p>
       </header>
@@ -67,16 +67,16 @@ onMounted(() => {
                 alt="KAE Spa wellness"
                 customClass="w-full h-[360px] lg:h-[480px] object-cover"
               />
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kae-green/80 to-transparent p-6">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-kae-teal/80 to-transparent p-6">
                 <p class="font-script text-xl text-white">Ancient Wisdom, Modern Luxury</p>
               </div>
             </figure>
           </div>
           <div class="order-1 lg:order-2">
-            <h3 class="font-heading text-3xl lg:text-4xl text-kae-green mb-6">
+            <h3 class="font-heading text-3xl lg:text-4xl text-kae-teal mb-6">
               {{ philosophy.title }}
             </h3>
-            <p class="font-body text-kae-green/70 mb-10 leading-relaxed">
+            <p class="font-body text-kae-teal/70 mb-10 leading-relaxed">
               {{ philosophy.description }}
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -97,10 +97,10 @@ onMounted(() => {
       <article>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <h3 class="font-heading text-3xl lg:text-4xl text-kae-green mb-6">
+            <h3 class="font-heading text-3xl lg:text-4xl text-kae-teal mb-6">
               {{ ambiance.title }}
             </h3>
-            <p class="font-body text-kae-green/70 mb-10 leading-relaxed">
+            <p class="font-body text-kae-teal/70 mb-10 leading-relaxed">
               {{ ambiance.description }}
             </p>
             <div class="space-y-4">
@@ -115,8 +115,8 @@ onMounted(() => {
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-heading text-lg text-kae-green mb-0.5">{{ feature.title }}</h4>
-                  <p class="font-body text-sm text-kae-green/60">{{ feature.desc }}</p>
+                  <h4 class="font-heading text-lg text-kae-teal mb-0.5">{{ feature.title }}</h4>
+                  <p class="font-body text-sm text-kae-teal/60">{{ feature.desc }}</p>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ onMounted(() => {
               alt="KAE Spa sanctuary"
               customClass="w-full h-[360px] lg:h-[480px] object-cover"
             />
-            <div class="absolute top-0 right-0 bg-kae-gold text-kae-green px-5 py-2.5 rounded-bl-2xl">
+            <div class="absolute top-0 right-0 bg-kae-gold text-kae-teal-dark px-5 py-2.5 rounded-bl-2xl">
               <p class="font-body text-sm font-medium">Est. 2024</p>
             </div>
           </figure>

@@ -7,33 +7,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Luxury KAE Spa Color Palette - Refined Premium System
+        // Luxury KAE Spa Color Palette - Matched to Flyer Design
         'kae': {
-          green: '#004225',        // Deep emerald - Primary brand
-          beige: '#F5F5DC',        // Warm beige - Main background
-          gold: '#C9A227',         // Rich gold - Highlights & CTAs (less yellow)
-          'gold-light': '#E5C76B', // Lighter gold - Accents & hover states
-          peach: '#E8D4A0',        // Warm gold-tinted - Soft accents
-          'green-dark': '#002817', // Darker green - Depth & footer
-          'gold-dark': '#A67C00',  // Darker gold - Hover states
-          'beige-warm': '#FAF6F0', // Slightly warmer beige variant
+          teal: '#1A5F5F',         // Deep teal/sea green - Primary brand (flyer background)
+          'teal-light': '#2D7A7A', // Lighter teal - Accents & hover states
+          'teal-dark': '#0F4242',  // Darker teal - Depth & footer
+          gold: '#C4A77D',         // Bronze gold - Highlights & CTAs (flyer metallic)
+          'gold-light': '#D4C4A8', // Lighter gold - Subtle accents
+          'gold-dark': '#A68B5B',  // Darker gold - Hover states
+          cream: '#FAF8F5',        // Off-white - Main background
+          white: '#FFFFFF',        // Pure white - Text on dark backgrounds
+          sand: '#E8DDD0',         // Warm sand - Soft backgrounds
         },
-        // Flat utility aliases for convenience (text-kae-green, bg-kae-gold, etc.)
-        'kae-green': '#004225',
-        'kae-beige': '#F5F5DC',
-        'kae-gold': '#C9A227',
-        'kae-gold-light': '#E5C76B',
-        'kae-peach': '#E8D4A0',
-        'kae-green-dark': '#002817',
+        // Flat utility aliases for convenience (text-kae-teal, bg-kae-gold, etc.)
+        'kae-teal': '#1A5F5F',
+        'kae-teal-light': '#2D7A7A',
+        'kae-teal-dark': '#0F4242',
+        'kae-gold': '#C4A77D',
+        'kae-gold-light': '#D4C4A8',
+        'kae-gold-dark': '#A68B5B',
+        'kae-cream': '#FAF8F5',
+        'kae-white': '#FFFFFF',
+        'kae-sand': '#E8DDD0',
         // Semantic aliases
-        'primary': '#004225',
-        'secondary': '#F5F5DC',
-        'accent': '#C9A227',
-        'accent-light': '#E5C76B',
+        'primary': '#1A5F5F',
+        'secondary': '#FAF8F5',
+        'accent': '#C4A77D',
+        'accent-light': '#D4C4A8',
       },
       fontFamily: {
-        'heading': ['Cormorant Garamond', 'Playfair Display', 'serif'],
-        'body': ['Cormorant', 'Montserrat', 'sans-serif'],
+        'heading': ['Montserrat', 'sans-serif'],
+        'body': ['Montserrat', 'sans-serif'],
         'script': ['Great Vibes', 'cursive'],
       },
       fontSize: {
@@ -50,18 +54,19 @@ export default {
         '144': '36rem',
       },
       backgroundImage: {
-        'luxury-gradient': 'linear-gradient(135deg, #004225 0%, #002817 100%)',
-        'gold-gradient': 'linear-gradient(135deg, #C9A227 0%, #E5C76B 50%, #C9A227 100%)',
-        'subtle-gradient': 'linear-gradient(180deg, #F5F5DC 0%, #FAF8F0 100%)',
+        'luxury-gradient': 'linear-gradient(135deg, #1A5F5F 0%, #0F4242 100%)',
+        'teal-gradient': 'linear-gradient(135deg, #1A5F5F 0%, #2D7A7A 50%, #1A5F5F 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #C4A77D 0%, #D4C4A8 50%, #C4A77D 100%)',
+        'subtle-gradient': 'linear-gradient(180deg, #FAF8F5 0%, #E8DDD0 100%)',
       },
       boxShadow: {
-        'luxury': '0 25px 50px -12px rgba(0, 66, 37, 0.12)',
-        'luxury-lg': '0 35px 60px -15px rgba(0, 66, 37, 0.2)',
-        'luxury-soft': '0 4px 24px -4px rgba(0, 66, 37, 0.08)',
-        'gold': '0 10px 40px -10px rgba(201, 162, 39, 0.25)',
-        'gold-lg': '0 20px 60px -15px rgba(201, 162, 39, 0.35)',
-        'card': '0 2px 20px -4px rgba(0, 66, 37, 0.06)',
-        'card-hover': '0 12px 40px -8px rgba(0, 66, 37, 0.15)',
+        'luxury': '0 25px 50px -12px rgba(26, 95, 95, 0.12)',
+        'luxury-lg': '0 35px 60px -15px rgba(26, 95, 95, 0.2)',
+        'luxury-soft': '0 4px 24px -4px rgba(26, 95, 95, 0.08)',
+        'gold': '0 10px 40px -10px rgba(196, 167, 125, 0.25)',
+        'gold-lg': '0 20px 60px -15px rgba(196, 167, 125, 0.35)',
+        'card': '0 2px 20px -4px rgba(26, 95, 95, 0.06)',
+        'card-hover': '0 12px 40px -8px rgba(26, 95, 95, 0.15)',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',

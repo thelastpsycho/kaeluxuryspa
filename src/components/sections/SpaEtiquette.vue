@@ -9,14 +9,14 @@ const guidelines = [
 </script>
 
 <template>
-  <section id="spa-etiquette" class="section-padding bg-kae-beige overflow-hidden">
+  <section id="spa-etiquette" class="section-padding bg-kae-cream overflow-hidden">
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-24">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Before Your Visit</span>
-        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-teal mb-6">
           Spa Etiquette
         </h2>
-        <p class="font-body text-lg text-kae-green/70 max-w-xl mx-auto">
+        <p class="font-body text-lg text-kae-teal/70 max-w-xl mx-auto">
           Guidelines for a perfect spa experience
         </p>
       </header>
@@ -25,10 +25,10 @@ const guidelines = [
         <article
           v-for="(g, i) in guidelines"
           :key="g.title"
-          class="group relative bg-white rounded-3xl p-8 shadow-card transition-all duration-500 hover:shadow-card-hover hover:-translate-y-1 border border-kae-green/5"
+          class="group relative bg-white rounded-3xl p-8 shadow-card transition-all duration-500 hover:shadow-card-hover hover:-translate-y-1 border border-kae-teal/5"
           :class="i === guidelines.length - 1 ? 'md:col-span-2' : ''"
         >
-          <div v-if="g.important" class="absolute -top-2 -right-2 px-3 py-1 bg-kae-gold text-kae-green rounded-full text-xs font-body font-medium">
+          <div v-if="g.important" class="absolute -top-2 -right-2 px-3 py-1 bg-kae-gold text-kae-teal rounded-full text-xs font-body font-medium">
             Important
           </div>
           <div class="flex items-start gap-5">
@@ -38,8 +38,8 @@ const guidelines = [
               </svg>
             </div>
             <div>
-              <h3 class="font-heading text-xl text-kae-green mb-2 group-hover:text-kae-gold transition-colors">{{ g.title }}</h3>
-              <p class="font-body text-kae-green/70 text-sm leading-relaxed">{{ g.description }}</p>
+              <h3 class="font-heading text-xl text-kae-teal mb-2 group-hover:text-kae-gold transition-colors">{{ g.title }}</h3>
+              <p class="font-body text-kae-teal/70 text-sm leading-relaxed">{{ g.description }}</p>
             </div>
           </div>
         </article>
@@ -50,7 +50,7 @@ const guidelines = [
           <svg class="w-5 h-5 text-kae-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <p class="font-body text-kae-green text-sm">
+          <p class="font-body text-kae-teal text-sm">
             <span class="font-medium">Questions?</span> Feel free to contact us before your visit
           </p>
         </div>

@@ -61,14 +61,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="services" class="section-padding bg-kae-beige overflow-hidden">
+  <section id="services" class="section-padding bg-kae-cream overflow-hidden">
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-24">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Treatments</span>
-        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-teal mb-6">
           Services
         </h2>
-        <p class="font-body text-lg lg:text-xl text-kae-green/70 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-body text-lg lg:text-xl text-kae-teal/70 max-w-2xl mx-auto leading-relaxed">
           Premium experiences crafted for your ultimate relaxation and wellness
         </p>
       </header>
@@ -85,13 +85,13 @@ onMounted(() => {
               :alt="`${service.title} at KAE Spa`"
               customClass="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-kae-green/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-kae-teal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </figure>
           <div class="p-8">
-            <h3 class="font-heading text-2xl text-kae-green mb-3 group-hover:text-kae-gold transition-colors duration-300">
+            <h3 class="font-heading text-2xl text-kae-teal mb-3 group-hover:text-kae-gold transition-colors duration-300">
               {{ service.title }}
             </h3>
-            <p class="font-body text-kae-green/70 text-sm mb-5 leading-relaxed">
+            <p class="font-body text-kae-teal/70 text-sm mb-5 leading-relaxed">
               {{ service.description }}
             </p>
             <div class="flex items-center justify-between">
@@ -100,7 +100,7 @@ onMounted(() => {
                 href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-kae-green font-body text-sm font-medium hover:text-kae-gold transition-colors inline-flex items-center gap-1"
+                class="text-kae-teal font-body text-sm font-medium hover:text-kae-gold transition-colors inline-flex items-center gap-1"
               >
                 Book
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

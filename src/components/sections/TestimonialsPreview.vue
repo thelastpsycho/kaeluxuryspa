@@ -31,7 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="testimonials" class="section-padding bg-kae-green overflow-hidden">
+  <section id="testimonials" class="section-padding bg-kae-teal overflow-hidden">
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-20">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Reviews</span>
@@ -78,10 +78,10 @@ onMounted(() => {
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
               </svg>
             </div>
-            <p class="font-body text-lg text-kae-green/80 italic mb-8 leading-relaxed">
+            <p class="font-body text-lg text-kae-teal/80 italic mb-8 leading-relaxed">
               "{{ testimonials[currentIndex].comment }}"
             </p>
-            <p class="font-heading text-xl text-kae-green">{{ testimonials[currentIndex].name }}</p>
+            <p class="font-heading text-xl text-kae-teal">{{ testimonials[currentIndex].name }}</p>
           </div>
         </Transition>
 

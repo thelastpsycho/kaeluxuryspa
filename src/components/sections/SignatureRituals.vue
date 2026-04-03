@@ -28,14 +28,14 @@ const rituals = ref([
 </script>
 
 <template>
-  <section id="rituals" class="section-padding bg-kae-beige overflow-hidden">
+  <section id="rituals" class="section-padding bg-kae-cream overflow-hidden">
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-24">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Experience</span>
-        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-teal mb-6">
           Signature Rituals
         </h2>
-        <p class="font-body text-lg lg:text-xl text-kae-green/70 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-body text-lg lg:text-xl text-kae-teal/70 max-w-2xl mx-auto leading-relaxed">
           Curated journeys blending tradition with luxury, designed to transport you to complete serenity
         </p>
       </header>
@@ -53,17 +53,17 @@ const rituals = ref([
               :alt="ritual.title"
               customClass="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-kae-green/80 via-kae-green/20 to-transparent" />
-            <span class="absolute top-5 left-5 px-4 py-1.5 bg-kae-gold/90 text-kae-green text-xs font-body font-medium tracking-wider uppercase rounded-full">
+            <div class="absolute inset-0 bg-gradient-to-t from-kae-teal/80 via-kae-teal/20 to-transparent" />
+            <span class="absolute top-5 left-5 px-4 py-1.5 bg-kae-gold/90 text-kae-teal text-xs font-body font-medium tracking-wider uppercase rounded-full">
               {{ ritual.tag }}
             </span>
-            <span class="absolute top-5 right-5 text-kae-beige/90 font-body text-sm">{{ ritual.duration }}</span>
+            <span class="absolute top-5 right-5 text-kae-white/90 font-body text-sm">{{ ritual.duration }}</span>
           </figure>
           <div class="p-8 lg:p-10">
-            <h3 class="font-heading text-2xl lg:text-3xl text-kae-green mb-4 group-hover:text-kae-gold transition-colors duration-300">
+            <h3 class="font-heading text-2xl lg:text-3xl text-kae-teal mb-4 group-hover:text-kae-gold transition-colors duration-300">
               {{ ritual.title }}
             </h3>
-            <p class="font-body text-kae-green/70 leading-relaxed mb-6">
+            <p class="font-body text-kae-teal/70 leading-relaxed mb-6">
               {{ ritual.description }}
             </p>
             <a

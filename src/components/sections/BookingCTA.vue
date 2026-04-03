@@ -3,7 +3,7 @@
 
 <template>
   <section class="relative py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-kae-green via-kae-green to-kae-green-dark" />
+    <div class="absolute inset-0 bg-gradient-to-br from-kae-teal via-kae-teal to-kae-teal-dark" />
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(255,207,157,0.1)_0%,transparent_50%)]" />
 
     <div class="container-editorial relative z-10">

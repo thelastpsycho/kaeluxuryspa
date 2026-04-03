@@ -49,10 +49,10 @@ onMounted(async () => {
     <div class="container-editorial">
       <header class="text-center mb-16 lg:mb-24">
         <span class="inline-block font-script text-2xl lg:text-3xl text-kae-gold mb-4 tracking-wide">Full Menu</span>
-        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-green mb-6">
+        <h2 class="font-heading text-4xl lg:text-5xl xl:text-6xl text-kae-teal mb-6">
           Treatments & Pricing
         </h2>
-        <p class="font-body text-lg lg:text-xl text-kae-green/70 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-body text-lg lg:text-xl text-kae-teal/70 max-w-2xl mx-auto leading-relaxed">
           Discover our curated selection of premium spa experiences
         </p>
       </header>
@@ -69,18 +69,18 @@ onMounted(async () => {
         <article
           v-for="treatment in treatments"
           :key="treatment.id"
-          class="group bg-kae-beige/40 rounded-3xl p-8 border border-kae-green/5 transition-all duration-500 hover:shadow-card-hover hover:border-kae-gold/20 hover:-translate-y-1"
+          class="group bg-kae-cream/40 rounded-3xl p-8 border border-kae-teal/5 transition-all duration-500 hover:shadow-card-hover hover:border-kae-gold/20 hover:-translate-y-1"
         >
           <span
             v-if="treatment.category"
-            class="inline-block px-3 py-1 mb-4 text-xs font-body font-medium tracking-wider uppercase rounded-full bg-kae-green/5 text-kae-green"
+            class="inline-block px-3 py-1 mb-4 text-xs font-body font-medium tracking-wider uppercase rounded-full bg-kae-teal/5 text-kae-teal"
           >
             {{ treatment.category }}
           </span>
-          <h3 class="font-heading text-xl lg:text-2xl text-kae-green mb-3 group-hover:text-kae-gold transition-colors duration-300">
+          <h3 class="font-heading text-xl lg:text-2xl text-kae-teal mb-3 group-hover:text-kae-gold transition-colors duration-300">
             {{ treatment.name }}
           </h3>
-          <p class="font-body text-kae-green/70 text-sm mb-6 leading-relaxed">
+          <p class="font-body text-kae-teal/70 text-sm mb-6 leading-relaxed">
             {{ treatment.description }}
           </p>
           <div class="flex flex-wrap gap-3">
@@ -90,7 +90,7 @@ onMounted(async () => {
               :href="getWhatsAppLink(treatment, option)"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-kae-green/10 text-kae-green text-sm font-body font-medium transition-all duration-300 hover:bg-kae-gold hover:text-kae-green hover:border-kae-gold"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-kae-teal/10 text-kae-teal text-sm font-body font-medium transition-all duration-300 hover:bg-kae-gold hover:text-kae-teal hover:border-kae-gold"
               :aria-label="`Book ${treatment.name} - ${option.duration} at ${option.price}`"
             >
               {{ option.price }} · {{ option.duration }}

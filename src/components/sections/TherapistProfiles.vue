@@ -24,7 +24,7 @@ const therapists = [
 </script>
 
 <template>
-  <section id="therapists" class="section-padding bg-kae-green overflow-hidden">
+  <section id="therapists" class="section-padding bg-kae-teal overflow-hidden">
     <div class="absolute inset-0 opacity-5 therapist-pattern" />
 
     <div class="container-editorial relative z-10">

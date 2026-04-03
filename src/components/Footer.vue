@@ -24,7 +24,7 @@ const contact = {
 </script>
 
 <template>
-  <footer class="relative bg-kae-green-dark pt-20 pb-10 overflow-hidden">
+  <footer class="relative bg-kae-teal-dark pt-20 pb-10 overflow-hidden">
     <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-kae-gold/50 to-transparent" />
 
     <div class="container-editorial relative z-10">
@@ -32,7 +32,7 @@ const contact = {
         <div>
           <h3 class="font-heading text-2xl text-white mb-2">KAE Spa</h3>
           <p class="font-script text-xl text-kae-gold mb-5">Bali</p>
-          <p class="font-body text-sm text-kae-beige/70 leading-relaxed mb-6">
+          <p class="font-body text-sm text-kae-white/70 leading-relaxed mb-6">
             Ancient Balinese healing meets modern luxury in our serene sanctuary.
           </p>
           <div class="flex gap-3">
@@ -42,7 +42,7 @@ const contact = {
               :href="s.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-10 h-10 rounded-full border border-kae-gold/30 flex items-center justify-center text-kae-beige/60 hover:text-kae-gold hover:border-kae-gold transition-all duration-300"
+              class="w-10 h-10 rounded-full border border-kae-gold/30 flex items-center justify-center text-kae-white/60 hover:text-kae-gold hover:border-kae-gold transition-all duration-300"
               :aria-label="`Follow on ${s.name}`"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path :d="s.icon"/></svg>
@@ -54,7 +54,7 @@ const contact = {
           <h4 class="font-heading text-lg text-white mb-6">Quick Links</h4>
           <ul class="space-y-3">
             <li v-for="l in quickLinks" :key="l.name">
-              <a :href="l.href" class="font-body text-sm text-kae-beige/70 hover:text-kae-gold transition-colors">
+              <a :href="l.href" class="font-body text-sm text-kae-white/70 hover:text-kae-gold transition-colors">
                 {{ l.name }}
               </a>
             </li>
@@ -64,16 +64,16 @@ const contact = {
         <div>
           <h4 class="font-heading text-lg text-white mb-6">Contact</h4>
           <ul class="space-y-4">
-            <li class="font-body text-sm text-kae-beige/70">{{ contact.address }}</li>
-            <li><a :href="`tel:${contact.phone}`" class="text-kae-beige/70 hover:text-kae-gold transition-colors">{{ contact.phone }}</a></li>
-            <li><a :href="`mailto:${contact.email}`" class="text-kae-beige/70 hover:text-kae-gold transition-colors">{{ contact.email }}</a></li>
-            <li class="text-kae-beige/70">{{ contact.hours }}</li>
+            <li class="font-body text-sm text-kae-white/70">{{ contact.address }}</li>
+            <li><a :href="`tel:${contact.phone}`" class="text-kae-white/70 hover:text-kae-gold transition-colors">{{ contact.phone }}</a></li>
+            <li><a :href="`mailto:${contact.email}`" class="text-kae-white/70 hover:text-kae-gold transition-colors">{{ contact.email }}</a></li>
+            <li class="text-kae-white/70">{{ contact.hours }}</li>
           </ul>
         </div>
 
         <div>
           <h4 class="font-heading text-lg text-white mb-6">Book Your Visit</h4>
-          <p class="font-body text-sm text-kae-beige/70 mb-6">Ready for ultimate relaxation?</p>
+          <p class="font-body text-sm text-kae-white/70 mb-6">Ready for ultimate relaxation?</p>
           <div class="space-y-3">
             <a
               :href="`https://wa.me/${contact.whatsapp}`"

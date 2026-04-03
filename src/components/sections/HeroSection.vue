@@ -16,11 +16,11 @@ onMounted(() => {
     <!-- Calming Background Image with Deep Emerald Overlay -->
     <div class="absolute inset-0">
       <LazyImage
-        src="https://images.unsplash.com/photo-1540555700478-4be289fbec6f?q=80&w=2070&auto=format&fit=crop"
+        src="/front.jpg"
         alt="Kae Luxury Spa interior"
         customClass="w-full h-full object-cover object-center scale-105 animate-slow-zoom"
       />
-      <div class="absolute inset-0 bg-kae-green/90" />
+      <div class="absolute inset-0 bg-kae-teal/90" />
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(233,201,120,0.18)_0%,transparent_55%)]" />
     </div>
 
