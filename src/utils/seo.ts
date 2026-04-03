@@ -15,14 +15,14 @@ interface MetaTags {
 }
 
 const defaultMetaTags: MetaTags = {
-  title: 'KAE Spa Bali | Luxury Spa & Wellness Sanctuary in Kuta',
-  description: 'KAE Spa Bali - Luxury spa treatments in Bali including signature massages, facials, and body scrubs. Experience ultimate relaxation and rejuvenation in our serene sanctuary in Kuta.',
-  keywords: 'KAE Spa Bali, luxury spa Bali, massage Bali, facial treatment Bali, body scrub Bali, relaxation Bali, rejuvenation Bali, wellness Bali, spa treatments Bali, beauty treatments Bali, massage therapy Bali, facial care Bali, body care Bali, Kuta spa, Bali spa',
-  ogTitle: 'KAE Spa Bali - Luxury Spa & Wellness Sanctuary in Kuta',
-  ogDescription: 'Experience ultimate relaxation with our signature spa treatments in Bali. Book your luxury massage, facial, or body scrub today at KAE Spa Bali.',
+  title: 'Kae Luxury Spa | Premier Spa & Wellness Sanctuary in Bali',
+  description: 'Kae Luxury Spa - Experience ultimate relaxation at Bali\'s premier spa sanctuary. Specializing in traditional Balinese massage, warm oil therapy, hot stone massage, deep tissue, water healing head spa, and luxury body treatments. Book your wellness escape today in Seminyak, Bali.',
+  keywords: 'Kae Luxury Spa, luxury spa Bali, Balinese massage, hot stone massage, deep tissue massage, water healing head spa, foot massage, back massage, face lifting massage, body scrub Bali, spa Seminyak, wellness Bali, spa treatments Bali, luxury day spa Bali, best spa Bali, relaxation Bali',
+  ogTitle: 'Kae Luxury Spa - Premier Spa & Wellness Sanctuary in Bali',
+  ogDescription: 'Discover Bali\'s finest luxury spa experience. From traditional Balinese massage to water healing head spa, indulge in ultimate relaxation. Book your treatment today at Kae Luxury Spa.',
   ogImage: 'https://kaespabali.com/src/assets/og-image.jpg',
-  twitterTitle: 'KAE Spa Bali - Luxury Spa & Wellness Sanctuary in Kuta',
-  twitterDescription: 'Experience ultimate relaxation with our signature spa treatments in Bali. Book your luxury massage, facial, or body scrub today at KAE Spa Bali.',
+  twitterTitle: 'Kae Luxury Spa - Luxury Spa & Wellness Sanctuary in Kuta',
+  twitterDescription: 'Experience ultimate relaxation with our signature spa treatments in Bali. Book your luxury massage, facial, or body scrub today at Kae Luxury Spa.',
   twitterImage: 'https://kaespabali.com/src/assets/og-image.jpg',
   canonical: 'https://kaespabali.com'
 }
@@ -115,7 +115,7 @@ export const useSEO = (options: MetaOptions) => {
     type = 'website',
     publishedTime,
     modifiedTime,
-    author = 'KAE Spa Bali'
+    author = 'Kae Luxury Spa'
   } = options
 
   // Basic meta tags
@@ -192,18 +192,18 @@ export const useSEO = (options: MetaOptions) => {
 
 // Predefined meta descriptions for different sections
 export const metaDescriptions = {
-  home: 'Experience luxury spa treatments in the heart of Bali. KAE Spa offers a wide range of massage and wellness services for ultimate relaxation.',
-  services: 'Discover our premium spa services including traditional Balinese massage, body treatments, facials, and more at KAE Spa Bali.',
-  about: 'Learn about KAE Spa Bali\'s commitment to wellness and our team of professional therapists dedicated to your relaxation and rejuvenation.',
-  contact: 'Get in touch with KAE Spa Bali. Book your appointment, inquire about our services, or visit our location in Bali.',
-  privacy: 'Privacy Policy of KAE Spa Bali. Learn how we collect, use, and protect your personal information.'
+  home: 'Experience ultimate relaxation at Kae Luxury Spa in Bali. Specializing in traditional Balinese massage, water healing head spa, hot stone massage, and luxury body treatments. Book your wellness escape today.',
+  services: 'Discover our premium spa services at Kae Luxury Spa including Balinese traditional massage, warm oil massage, hot stone, deep tissue, foot massage, back & head massage, shiatsu, face lifting, body scrub, and water healing head spa.',
+  about: 'Learn about Kae Luxury Spa\'s commitment to wellness. Our sanctuary combines ancient Balinese healing traditions with modern luxury for your complete relaxation and rejuvenation.',
+  contact: 'Get in touch with Kae Luxury Spa in Seminyak, Bali. Book your appointment, inquire about our spa treatments, or visit us. Open 9AM - 9PM daily.',
+  privacy: 'Privacy Policy of Kae Luxury Spa. Learn how we collect, use, and protect your personal information.'
 }
 
 // Predefined titles for different sections
 export const metaTitles = {
-  home: 'KAE Spa Bali - Luxury Spa & Wellness Center',
-  services: 'Spa Services - KAE Spa Bali',
-  about: 'About Us - KAE Spa Bali',
-  contact: 'Contact Us - KAE Spa Bali',
-  privacy: 'Privacy Policy - KAE Spa Bali'
+  home: 'Kae Luxury Spa - Premier Spa & Wellness Sanctuary in Bali',
+  services: 'Spa Services - Kae Luxury Spa Bali',
+  about: 'About Us - Kae Luxury Spa Bali',
+  contact: 'Contact Us - Kae Luxury Spa Bali',
+  privacy: 'Privacy Policy - Kae Luxury Spa Bali'
 } 
