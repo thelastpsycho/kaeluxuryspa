@@ -4,7 +4,6 @@ import ServicesPreview from '../components/sections/ServicesPreview.vue'
 import MenuSection from '../components/sections/MenuSection.vue'
 import SignatureRituals from '../components/sections/SignatureRituals.vue'
 import WellnessPackages from '../components/sections/WellnessPackages.vue'
-import TherapistProfiles from '../components/sections/TherapistProfiles.vue'
 import AboutSection from '../components/sections/AboutSection.vue'
 import SpaEtiquette from '../components/sections/SpaEtiquette.vue'
 import TestimonialsPreview from '../components/sections/TestimonialsPreview.vue'
@@ -19,7 +18,6 @@ import ContactSection from '../components/sections/ContactSection.vue'
     <MenuSection id="menu" />
     <SignatureRituals id="rituals" />
     <WellnessPackages id="packages" />
-    <TherapistProfiles id="therapists" />
     <AboutSection id="about" />
     <SpaEtiquette id="spa-etiquette" />
     <TestimonialsPreview id="testimonials" />

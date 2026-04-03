@@ -14,7 +14,6 @@ const navItems = [
   { name: 'Menu', hash: 'menu' },
   { name: 'Rituals', hash: 'rituals' },
   { name: 'Packages', hash: 'packages' },
-  { name: 'Therapists', hash: 'therapists' },
   { name: 'About', hash: 'about' },
   { name: 'Etiquette', hash: 'spa-etiquette' },
   { name: 'Reviews', hash: 'testimonials' },
