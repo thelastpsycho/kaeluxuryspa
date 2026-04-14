@@ -24,10 +24,27 @@ const router = useRouter()
 const loadTreatments = async () => {
   try {
     loading.value = true
+
+    // Check if user is authenticated
+    const user = authService.getCurrentUser()
+    if (!user) {
+      error.value = 'You must be logged in to access this page'
+      router.push('/login')
+      return
+    }
+
     treatments.value = await menuService.getAllTreatments()
   } catch (err) {
-    error.value = 'Failed to load treatments'
-    console.error(err)
+    error.value = 'Failed to load treatments. Please check your permissions.'
+    console.error('Firebase error:', err)
+
+    // If it's a permissions error, redirect to login
+    if (err instanceof Error && err.message.includes('Missing or insufficient permissions')) {
+      error.value = 'Insufficient permissions. Please log in with an authorized account.'
+      setTimeout(() => {
+        router.push('/login')
+      }, 2000)
+    }
   } finally {
     loading.value = false
   }
