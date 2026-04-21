@@ -84,15 +84,14 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 right-0 transition-all duration-400',
-      isScrolled ? 'bg-kae-teal/95 backdrop-blur-md shadow-luxury-soft' : 'lg:bg-transparent bg-kae-teal/95'
+      'fixed top-0 left-0 right-0 z-[9999] transition-all duration-400 shadow-2xl',
+      isScrolled ? 'bg-kae-teal' : 'lg:bg-transparent bg-kae-teal'
     ]"
-    style="z-index: 9999; position: fixed; top: 0;"
   >
     <div class="container-editorial">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <a href="#" class="flex items-center gap-2" @click.prevent="scrollToSection('')">
-          <img :src="kaeLogo" alt="KAE Spa" class="h-14 lg:h-16" :class="isScrolled ? '' : 'filter brightness-0 invert'" />
+          <img :src="kaeLogo" alt="KAE Spa" class="h-14 lg:h-16" />
           <!-- <span v-if="!isScrolled" class="font-script text-2xl text-kae-gold">KAE</span> -->
         </a>
 
@@ -129,7 +128,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
 
         <button
           @click="toggleMenu"
-          class="lg:hidden p-2 rounded-full transition-colors text-kae-gold"
+          class="lg:hidden p-3 rounded-full bg-kae-gold/20 text-kae-gold border-2 border-kae-gold/40 transition-all hover:bg-kae-gold/30"
           aria-label="Toggle menu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

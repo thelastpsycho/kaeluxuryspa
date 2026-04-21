@@ -12,7 +12,7 @@ const handleClick = () => {
     target="_blank"
     rel="noopener noreferrer"
     @click="handleClick"
-    class="fixed bottom-6 right-6 lg:bottom-8 lg:right-8 z-50 group"
+    class="fixed bottom-6 right-6 lg:bottom-8 lg:right-8 z-[9998] group"
     aria-label="Chat on WhatsApp"
   >
     <div class="relative">
