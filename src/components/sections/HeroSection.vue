@@ -54,7 +54,7 @@ onMounted(() => {
               :style="isLoaded ? { animation: 'fadeInUp 0.7s ease-out 0.65s forwards' } : { opacity: 0 }"
             >
               <a
-                href="https://wa.me/6282147215031?text=Hi,%20I%20would%20like%20to%20book%20a%20treatment%20at%20Kae%20Luxury%20Spa"
+                href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="group inline-flex items-center justify-center gap-3 bg-kae-gold text-kae-green px-10 py-4 rounded-full font-body text-base font-medium transition-all duration-400 hover:bg-kae-gold-light hover:shadow-gold hover:-translate-y-0.5"
@@ -121,7 +121,7 @@ onMounted(() => {
                 <svg class="w-5 h-5 text-kae-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="font-body text-sm text-kae-beige/80">9AM - 9PM Daily</span>
+                <span class="font-body text-sm text-kae-beige/80">10AM - 11PM Daily</span>
               </div>
             </div>
 

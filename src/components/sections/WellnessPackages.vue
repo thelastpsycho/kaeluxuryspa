@@ -66,7 +66,7 @@ const packages = [
           <div class="flex items-end justify-between">
             <span class="font-heading text-xl text-kae-gold">{{ pkg.price }}</span>
             <a
-              href="https://wa.me/6282147215031"
+              href="https://wa.me/6285119315618"
               target="_blank"
               rel="noopener noreferrer"
               class="px-5 py-2.5 bg-kae-teal text-kae-gold rounded-full text-sm font-body font-medium transition-all duration-300 hover:bg-kae-teal-dark hover:-translate-y-0.5"

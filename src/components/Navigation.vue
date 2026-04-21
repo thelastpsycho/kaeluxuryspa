@@ -12,13 +12,21 @@ const navItems = [
   { name: 'Home', hash: '' },
   { name: 'Services', hash: 'services' },
   { name: 'Menu', hash: 'menu' },
-  { name: 'Rituals', hash: 'rituals' },
-  { name: 'Packages', hash: 'packages' },
   { name: 'About', hash: 'about' },
   { name: 'Etiquette', hash: 'spa-etiquette' },
   { name: 'Reviews', hash: 'testimonials' },
   { name: 'Contact', hash: 'contact' },
 ]
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  // Prevent body scroll when menu is open
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+}
 
 const scrollToSection = (hash: string) => {
   if (hash === '') {
@@ -26,6 +34,7 @@ const scrollToSection = (hash: string) => {
     activeSection.value = ''
     history.pushState(null, '', '#')
     isMenuOpen.value = false
+    document.body.style.overflow = ''
     return
   }
   const el = document.getElementById(hash)
@@ -36,6 +45,7 @@ const scrollToSection = (hash: string) => {
     history.pushState(null, '', `#${hash}`)
   }
   isMenuOpen.value = false
+  document.body.style.overflow = ''
 }
 
 const handleScroll = () => {
@@ -63,7 +73,10 @@ onMounted(() => {
   } else handleScroll()
 })
 
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  document.body.style.overflow = ''
+})
 
 watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
 </script>
@@ -71,9 +84,10 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-400',
-      isScrolled ? 'bg-kae-teal/95 backdrop-blur-md shadow-luxury-soft' : 'bg-transparent'
+      'fixed top-0 left-0 right-0 transition-all duration-400',
+      isScrolled ? 'bg-kae-teal/95 backdrop-blur-md shadow-luxury-soft' : 'lg:bg-transparent bg-kae-teal/95'
     ]"
+    style="z-index: 9999; position: fixed; top: 0;"
   >
     <div class="container-editorial">
       <div class="flex items-center justify-between h-20 lg:h-24">
@@ -114,9 +128,8 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
         </a>
 
         <button
-          @click="isMenuOpen = !isMenuOpen"
-          class="lg:hidden p-2 rounded-full transition-colors"
-          :class="isScrolled ? 'text-kae-gold' : 'text-white'"
+          @click="toggleMenu"
+          class="lg:hidden p-2 rounded-full transition-colors text-kae-gold"
           aria-label="Toggle menu"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,7 +171,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
             target="_blank"
             rel="noopener noreferrer"
             class="mt-6 bg-kae-gold text-kae-teal-dark py-4 rounded-2xl font-body font-medium text-center"
-            @click="isMenuOpen = false"
+            @click="toggleMenu"
           >
             Book Your Experience
           </a>

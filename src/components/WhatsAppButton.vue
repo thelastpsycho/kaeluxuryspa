@@ -8,7 +8,7 @@ const handleClick = () => {
 
 <template>
   <a
-    href="https://wa.me/6282147215031"
+    href="https://wa.me/6285119315618"
     target="_blank"
     rel="noopener noreferrer"
     @click="handleClick"

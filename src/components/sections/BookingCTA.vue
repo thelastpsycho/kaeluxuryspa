@@ -27,7 +27,7 @@
             </svg>
           </a>
           <a
-            href="https://wa.me/6282147215031?text=Hi,%20I%20would%20like%20to%20book%20a%20treatment%20at%20KAE%20Spa"
+            href="https://wa.me/6285119315618?text=Hi,%20I%20would%20like%20to%20book%20a%20treatment%20at%20KAE%20Spa"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-kae-gold/50 text-kae-gold px-10 py-4 rounded-full font-body text-base font-medium transition-all duration-400 hover:bg-kae-gold/10 hover:border-kae-gold"

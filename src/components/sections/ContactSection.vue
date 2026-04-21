@@ -11,7 +11,7 @@ const handleContactSubmit = () => {
     return
   }
   const msg = `*Contact*\nName: ${contactForm.value.name}\nEmail: ${contactForm.value.email}\nSubject: ${contactForm.value.subject}\n\n${contactForm.value.message}`
-  window.open(`https://wa.me/6282147215031?text=${encodeURIComponent(msg)}`, '_blank')
+  window.open(`https://wa.me/6285119315618?text=${encodeURIComponent(msg)}`, '_blank')
   success.value = true
   contactForm.value = { name: '', email: '', subject: '', message: '' }
   error.value = ''
@@ -26,10 +26,10 @@ onMounted(() => {
     name: 'Contact KAE Spa Bali',
     mainEntity: {
       '@type': 'Organization',
-      name: 'KAE Spa Bali',
+      name: 'KAE Luxury Spa',
       address: { '@type': 'PostalAddress', addressLocality: 'Kuta', addressRegion: 'Bali', addressCountry: 'ID' },
-      telephone: '+62 821 4721 5031',
-      email: 'info@kaespabali.com',
+      telephone: '+62 851 1931 5618',
+      email: 'info@kaeluxuryspa.com',
     },
   })
   document.head.appendChild(script)
@@ -71,7 +71,7 @@ onMounted(() => {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 </div>
-                <a href="tel:+6282147215031" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">+62 821 4721 5031</a>
+                <a href="tel:+6285119315618" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">+62 851 1931 5618</a>
               </div>
               <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-kae-gold/10 flex items-center justify-center flex-shrink-0">
@@ -79,18 +79,18 @@ onMounted(() => {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
-                <a href="mailto:info@kaespabali.com" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">info@kaespabali.com</a>
+                <a href="mailto:info@kaeluxuryspa.com" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">info@kaeluxuryspa.com</a>
               </div>
             </div>
             <div class="mt-8 p-5 rounded-2xl bg-white border border-kae-teal/5">
               <h4 class="font-heading text-lg text-kae-teal mb-2">Opening Hours</h4>
-              <p class="font-body text-sm text-kae-teal/70">Everyday: 9:00 AM – 9:00 PM</p>
+              <p class="font-body text-sm text-kae-teal/70">Everyday: 10:00 AM – 11:00 PM</p>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <a
-              href="https://wa.me/6282147215031"
+              href="https://wa.me/6285119315618"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center gap-3 bg-kae-gold text-kae-teal py-4 px-5 rounded-2xl font-body font-medium transition-all duration-400 hover:bg-kae-gold-light hover:-translate-y-0.5"
@@ -180,7 +180,7 @@ onMounted(() => {
 
       <div class="mt-12 rounded-3xl overflow-hidden border border-kae-teal/5">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4093.446245731566!2d115.1423641!3d-8.643877499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239fffab5692d%3A0x4540548ca3b3185c!2sKae%20Spa%20Bali!5e1!3m2!1sen!2sid!4v1749203089148!5m2!1sen!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51279.14331333483!2d115.08747082486906!3d-8.639173842582556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239b3b1c33f25%3A0x5c05757876a75799!2sKae&#39;%20Spa%20Luxury!5e1!3m2!1sen!2sid!4v1776764043430!5m2!1sen!2sid"
           width="100%"
           height="360"
           style="border:0;"

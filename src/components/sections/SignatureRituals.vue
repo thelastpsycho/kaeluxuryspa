@@ -67,7 +67,7 @@ const rituals = ref([
               {{ ritual.description }}
             </p>
             <a
-              href="https://wa.me/6282147215031"
+              href="https://wa.me/6285119315618"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-kae-gold font-body text-sm font-medium transition-all duration-300 hover:gap-3"

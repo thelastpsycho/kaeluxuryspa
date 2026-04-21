@@ -444,11 +444,11 @@ const blogPosts: BlogPost[] = [
 ]
 
 const siteSettings: SiteSettings = {
-  contactEmail: 'info@kaespabali.com',
-  contactPhone: '+62 821 4721 5031',
-  whatsappNumber: '6282147215031',
+  contactEmail: 'info@kaeluxuryspa.com',
+  contactPhone: '+62 851 1931 5618',
+  whatsappNumber: '6285119315618',
   address: 'Jalan Raya Seminyak, Kuta, Badung, Bali, Indonesia',
-  openingHours: 'Monday - Sunday: 9:00 AM - 9:00 PM',
+  openingHours: 'Monday - Sunday: 10:00 AM - 11:00 PM',
   socialMedia: {
     instagram: 'https://instagram.com/kaespabali',
     facebook: 'https://facebook.com/kaespabali',

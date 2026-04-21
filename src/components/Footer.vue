@@ -10,16 +10,15 @@ const socialLinks = [
 const quickLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Menu', href: '#menu' },
-  { name: 'Rituals', href: '#rituals' },
   { name: 'Contact', href: '#contact' },
 ]
 
 const contact = {
-  email: 'info@kaespabali.com',
-  phone: '+62 821 4721 5031',
-  whatsapp: '6282147215031',
+  email: 'info@kaeluxuryspa.com',
+  phone: '+62 851 1931 5618',
+  whatsapp: '6285119315618',
   address: 'Jalan Raya Seminyak, Kuta, Badung, Bali',
-  hours: '9:00 AM – 9:00 PM Daily',
+  hours: '10:00 AM – 11:00 PM Daily',
 }
 </script>
 
@@ -30,7 +29,7 @@ const contact = {
     <div class="container-editorial relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 mb-16">
         <div>
-          <h3 class="font-heading text-2xl text-white mb-2">KAE Spa</h3>
+          <h3 class="font-heading text-2xl text-white mb-2">KAE Luxury Spa</h3>
           <p class="font-script text-xl text-kae-gold mb-5">Bali</p>
           <p class="font-body text-sm text-kae-white/70 leading-relaxed mb-6">
             Ancient Balinese healing meets modern luxury in our serene sanctuary.
@@ -102,7 +101,7 @@ const contact = {
       </div>
 
       <div class="pt-8 border-t border-kae-green/40 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="font-body text-sm text-kae-beige/50">&copy; {{ currentYear }} KAE Spa Bali. All rights reserved.</p>
+        <p class="font-body text-sm text-kae-beige/50">&copy; {{ currentYear }} KAE Luxury Spa. All rights reserved.</p>
         <router-link to="/privacy-policy" class="font-body text-sm text-kae-beige/50 hover:text-kae-gold transition-colors">
           Privacy Policy
         </router-link>

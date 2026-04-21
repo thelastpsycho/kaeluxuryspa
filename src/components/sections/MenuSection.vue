@@ -7,7 +7,7 @@ const loading = ref(true)
 const error = ref<string | null>(null)
 
 function getWhatsAppLink(treatment: Treatment, option: Treatment['options'][0]) {
-  const phone = '6282147215031'
+  const phone = '6285119315618'
   const text = `Hello, I would like to book the ${treatment.name} (${option.duration}, ${option.price}).`
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
 }
