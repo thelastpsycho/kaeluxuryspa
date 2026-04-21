@@ -29,7 +29,7 @@ onMounted(() => {
       name: 'KAE Luxury Spa',
       address: { '@type': 'PostalAddress', addressLocality: 'Kuta', addressRegion: 'Bali', addressCountry: 'ID' },
       telephone: '+62 851 1931 5618',
-      email: 'info@kaeluxuryspa.com',
+      email: 'kaeluxuryspa@gmail.com',
     },
   })
   document.head.appendChild(script)
@@ -79,7 +79,7 @@ onMounted(() => {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
-                <a href="mailto:info@kaeluxuryspa.com" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">info@kaeluxuryspa.com</a>
+                <a href="mailto:kaeluxuryspa@gmail.com" class="font-body text-sm text-kae-teal/70 hover:text-kae-gold transition-colors">kaeluxuryspa@gmail.com</a>
               </div>
             </div>
             <div class="mt-8 p-5 rounded-2xl bg-white border border-kae-teal/5">

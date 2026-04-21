@@ -13,8 +13,14 @@ function getWhatsAppLink(treatment: Treatment, option: Treatment['options'][0]) 
 }
 
 onMounted(async () => {
+  console.log('[MenuSection] Component mounted, starting to load treatments...')
+  console.log('[MenuSection] Firebase DB initialized:', !!import.meta.env.VITE_FIREBASE_PROJECT_ID)
+
   try {
+    console.log('[MenuSection] Calling menuService.getAllTreatments()...')
     treatments.value = await menuService.getAllTreatments()
+    console.log('[MenuSection] Successfully loaded treatments:', treatments.value.length)
+
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Menu',
@@ -35,11 +41,23 @@ onMounted(async () => {
     script.type = 'application/ld+json'
     script.text = JSON.stringify(structuredData)
     document.head.appendChild(script)
-  } catch (err) {
-    error.value = 'Failed to load treatments'
-    console.error(err)
+    console.log('[MenuSection] Structured data added')
+  } catch (err: any) {
+    console.error('[MenuSection] Error loading treatments:', err)
+    console.error('[MenuSection] Error details:', JSON.stringify(err, null, 2))
+
+    if (err.code === 'failed-precondition' || err.code === 'unimplemented') {
+      error.value = 'Browser storage is disabled. Please enable cookies/local storage in your browser settings to view the menu.'
+    } else if (err.code === 'unavailable') {
+      error.value = 'Service temporarily unavailable. Please check your internet connection and try again.'
+    } else if (err.code === 'permission-denied') {
+      error.value = 'Access denied. Please check your browser settings and try again.'
+    } else {
+      error.value = `Failed to load treatments: ${err.message || 'Unknown error'}`
+    }
   } finally {
     loading.value = false
+    console.log('[MenuSection] Loading complete. Loading state:', loading.value, 'Error state:', error.value, 'Treatments count:', treatments.value.length)
   }
 })
 </script>
@@ -63,6 +81,12 @@ onMounted(async () => {
 
       <div v-if="loading" class="flex justify-center py-20">
         <div class="w-12 h-12 border-2 border-kae-gold/30 border-t-kae-gold rounded-full animate-spin" />
+        <p class="ml-4 text-kae-teal/70 font-body">Loading treatments...</p>
+      </div>
+
+      <div v-else-if="treatments.length === 0" class="text-center py-20">
+        <p class="text-kae-teal/70 font-body text-lg">No treatments available. Please check back later.</p>
+        <p class="text-kae-teal/50 font-body text-sm mt-2">Debug: Treatments array is empty</p>
       </div>
 
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

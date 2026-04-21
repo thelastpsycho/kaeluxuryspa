@@ -14,7 +14,7 @@ const quickLinks = [
 ]
 
 const contact = {
-  email: 'info@kaeluxuryspa.com',
+  email: 'kaeluxuryspa@gmail.com',
   phone: '+62 851 1931 5618',
   whatsapp: '6285119315618',
   address: 'Jalan Raya Seminyak, Kuta, Badung, Bali',

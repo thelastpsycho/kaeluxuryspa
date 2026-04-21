@@ -444,7 +444,7 @@ const blogPosts: BlogPost[] = [
 ]
 
 const siteSettings: SiteSettings = {
-  contactEmail: 'info@kaeluxuryspa.com',
+  contactEmail: 'kaeluxuryspa@gmail.com',
   contactPhone: '+62 851 1931 5618',
   whatsappNumber: '6285119315618',
   address: 'Jalan Raya Seminyak, Kuta, Badung, Bali, Indonesia',
@@ -536,7 +536,7 @@ async function seedSiteSettings() {
 
 async function createAdminUser() {
   console.log('👤 Creating admin user...')
-  const adminEmail = 'admin@kaespabali.com'
+  const adminEmail = 'kaeluxuryspa@gmail.com'
   const adminPassword = 'Admin123!'
 
   try {

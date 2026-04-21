@@ -47,7 +47,7 @@ const props = withDefaults(defineProps<Props>(), {
               Call Us
             </a>
             <a 
-              href="mailto:info@kaespa.com" 
+              href="mailto:kaeluxuryspa@gmail.com" 
               class="btn-secondary bg-white/10 backdrop-blur-sm hover:bg-white/20"
             >
               Email Us
