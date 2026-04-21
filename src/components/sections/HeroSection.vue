@@ -54,7 +54,7 @@ onMounted(() => {
               :style="isLoaded ? { animation: 'fadeInUp 0.7s ease-out 0.65s forwards' } : { opacity: 0 }"
             >
               <a
-                href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp"
+                href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="group inline-flex items-center justify-center gap-3 bg-kae-gold text-kae-green px-10 py-4 rounded-full font-body text-base font-medium transition-all duration-400 hover:bg-kae-gold-light hover:shadow-gold hover:-translate-y-0.5"

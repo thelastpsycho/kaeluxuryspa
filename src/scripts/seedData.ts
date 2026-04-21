@@ -454,7 +454,7 @@ const siteSettings: SiteSettings = {
     facebook: 'https://facebook.com/kaespabali',
     tiktok: 'https://tiktok.com/@kaespabali'
   },
-  bookingUrl: 'https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564'
+  bookingUrl: 'https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564'
 }
 
 // ==================== SEED FUNCTIONS ====================

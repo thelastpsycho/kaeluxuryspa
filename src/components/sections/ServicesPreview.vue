@@ -97,7 +97,7 @@ onMounted(() => {
             <div class="flex items-center justify-between">
               <span class="text-kae-gold font-body text-sm font-medium">{{ service.price }} · {{ service.duration }}</span>
               <a
-                href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+                href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-kae-teal font-body text-sm font-medium hover:text-kae-gold transition-colors inline-flex items-center gap-1"

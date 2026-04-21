@@ -16,7 +16,7 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+            href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 bg-kae-gold text-kae-green px-10 py-4 rounded-full font-body text-base font-medium transition-all duration-400 hover:bg-kae-gold-light hover:shadow-gold hover:-translate-y-0.5"

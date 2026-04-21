@@ -101,7 +101,7 @@ onMounted(async () => {
 
       <div class="mt-16 text-center">
         <a
-          href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+          href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-3 bg-kae-green text-kae-gold px-10 py-4 rounded-full font-body font-medium transition-all duration-400 hover:bg-kae-green-dark hover:-translate-y-0.5"

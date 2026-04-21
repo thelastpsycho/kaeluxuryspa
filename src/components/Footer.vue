@@ -86,7 +86,7 @@ const contact = {
               WhatsApp
             </a>
             <a
-              href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+              href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center gap-2 w-full border border-kae-gold/40 text-kae-gold py-3.5 rounded-full font-body text-sm font-medium hover:bg-kae-gold/10 transition-all duration-300"

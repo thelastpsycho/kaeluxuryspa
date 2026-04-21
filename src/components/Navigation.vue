@@ -113,7 +113,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
         </div>
 
         <a
-          href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+          href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
           target="_blank"
           rel="noopener noreferrer"
           :class="[
@@ -167,7 +167,7 @@ watch(() => route.hash, (h) => { if (h) activeSection.value = h.slice(1) })
             {{ item.name }}
           </a>
           <a
-            href="https://www.fresha.com/id/book-now/kae-spa-bali-c85srrpb/all-offer?share&pId=2564564"
+            href="https://www.fresha.com/id/a/kae-spa-luxury-bali-jalan-padang-linjong-kabupaten-badung-bali-indonesia-xndowqpp?pId=2564564"
             target="_blank"
             rel="noopener noreferrer"
             class="mt-6 bg-kae-gold text-kae-teal-dark py-4 rounded-2xl font-body font-medium text-center"
